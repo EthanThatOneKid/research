@@ -1,5 +1,7 @@
 // https://codepen.io/uxjulia/pen/xgjmzp
 
+// check out some badges to use on https://shields.io/#/examples/build
+
 /*
 
 div

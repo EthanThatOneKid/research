@@ -4,6 +4,8 @@
 
     <title>Research - EthanThatOneKid</title>
 
+    <script src="scripts/main.js"></script>
+
   </head>
   <body>
 
@@ -14,8 +16,30 @@
     <a href="https://github.com/EthanThatOneKid">
       <img src="https://img.shields.io/github/followers/EthanThatOneKid.svg?style=social&label=Follow">
     </a>
+    <div id="project_cards"></div>
 
-    <script src="scripts/main.js"></script>
+    <script>
+      create_project_cards("#project_cards", [
+        {
+          "project": "Project X",
+          "stack": ["react", "express", "node"],
+          "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+          "website": "https://www.google.com",
+          "github": "https://www.github.com",
+          "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/326643/Sample%20Logo.png",
+          "status": "In Development"
+        },
+        {
+          "project": "Project X",
+          "stack": ["react", "express", "node"],
+          "description": "Some sample text giving project elevator pitch and blah blah and other stuff and goals and dreams and rainbows and butterflies and sunshine. ",
+          "website": "https://www.google.com",
+          "github": "https://www.github.com",
+          "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/326643/Sample%20Logo.png",
+          "status": "In Development"
+        }
+      ]);
+    </script>
 
   </body>
 </html>
