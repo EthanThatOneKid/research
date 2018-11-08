@@ -43,66 +43,61 @@ class Project_Card {
     meta.className = "meta";
 
     const photo = document.createElement("div");
-    photo.style.backgroundImage = `url(cgi-bin/${this.data.imgsrc})`;
+    photo.style.backgroundImage = `url(cgi-bin/${this.data.image})`;
     photo.className = "photo";
 
-    const officers = this.data.officers.reduce((ul, cur) => {
+    const stack = this.data.stack.reduce((ul, cur) => {
       const li = document.createElement("li");
       li.className = "author";
 
-      const a = document.createElement("a");
+      const span = document.createElement("span");
 
-      a.innerHTML = `<b>${cur.position}</b>: ${cur.name}`;
-      a.href = cur.link || "#";
+      span.textContent = cur;
 
-      li.appendChild(a);
+      li.appendChild(span);
       ul.appendChild(li);
 
       return ul;
     }, document.createElement("ul"));
-    officers.className = "details";
+    stack.className = "details";
 
-    const details = this.data.links.reduce((ul, cur) => {
-      const li = document.createElement("li");
-      li.className = "author";
-
-      const a = document.createElement("a");
-
-      a.innerText = cur.title;
-      a.href = cur.link || "#";
-
-      li.appendChild(a);
-      ul.appendChild(li);
-
-      return ul;
-    }, officers);
+    const details = document.createElement("li");
+    details.className = "author";
+    details.textContent = this.data.description;
+    stack.appendChild(details);
+    
+    const website = document.createElement("li");
+    const website_a = document.createElement("a");
+    website.className = "author";
+    website_a.href = this.data.website;
+    website_a.textContent = "website";
+    website.appendChild(website_a);
+    stack.appendChild(website);
+    
+    const github_repo = document.createElement("li");
+    const github_repo_a = document.createElement("a");
+    github_repo.className = "author";
+    github_repo_a.href = this.data.github;
+    github_repo_a.textContent = "github";
+    github_repo.appendChild(github_repo_a);
+    stack.appendChild(github_repo);
+    
+    const status = document.createElement("li");
+    status.className = "author";
+    status.textContent = `<b>status</b>: ${this.data.status}`;
+    stack.appendChild(status);
 
     const description = document.createElement("div");
     description.className = "description";
 
     const h1 = document.createElement("h1");
-    h1.innerText = this.data.name;
+    h1.innerText = this.data.project;
 
     const p = document.createElement("p");
     p.innerText = this.data.description;
 
-    const announcements = this.data.announcements.reduce((div, cur) => {
-      const h2 = document.createElement("h2");
-      const p = document.createElement("p");
-
-      h2.innerText = cur.title;
-      p.innerText = cur.description;
-
-      div.appendChild(h2);
-      div.appendChild(p);
-
-      return div;
-    }, document.createElement("div"));
-    announcements.className = "description";
-
     description.appendChild(h1);
     description.appendChild(p);
-    description.appendChild(announcements);
 
     meta.appendChild(photo);
     meta.appendChild(details);
