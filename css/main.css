@@ -1,11 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans');
-* {
+
+body {
+  margin: 0 auto;
+} * {
   font-family: 'Work Sans', sans-serif;
+}
+
+header {
+  text-align: center;
+} header .title {
+  font-size: 4em;
+  text-align: center;
+} header div {
+  text-align: center;
+  margin-bottom: 25px;
+} .avt {
+  border-radius: 50%;
+  width: 30px;
+  vertical-align: middle;
+} .github-follow-svg {
+  vertical-align: middle;
+}
+
+#project_cards {
+  margin: 0 auto;
 }
 
 .cards_container {
   list-style-type: none;
+  margin: 0 auto;
+  text-align: center;
 } .cards_container li {
-  margin: 50;
   display: inline-block;
 }

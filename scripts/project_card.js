@@ -58,6 +58,16 @@ class Project_Card {
     github_repo.appendChild(github_repo_a);
     details.appendChild(github_repo);
 
+    const github_stars = document.createElement("li");
+    const github_stars_a = document.createElement("a");
+    const github_stars_img = document.createElement("img");
+    github_stars.classList.add("author");
+    github_stars_a.href = this.data.github;
+    github_stars_img.src = `https://img.shields.io/github/stars/${this.data.github.split("github.com/")[1]}.svg?style=social&label=Stars`;
+    github_stars_a.appendChild(github_stars_img);
+    github_stars.appendChild(github_stars_a);
+    details.appendChild(github_stars);
+
     const status = document.createElement("li");
     status.classList.add("author", "status");
     status.innerHTML = `<b>status</b>: ${this.data.status}`;
