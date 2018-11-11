@@ -12,7 +12,7 @@
     <script src="scripts/main.js"></script>
 
   </head>
-  <body>
+  <body id="top">
     <header>
       <h1 class="title">Research</h1>
       <div>
@@ -26,73 +26,76 @@
 
     <div id="project_cards"></div>
 
+    <br><br>
+
+    <footer>
+      <small>EthanThatOneKid</small> |
+      <small>gmail: <a href="mailto:ethan.r.davidson@gmail.com?Subject=Hello%2C%20Ethan">ethan.r.davidson@gmail.com</a></small> |
+      <small>instagram: <a href="https://www.instagram.com/ethanthatonekid/">@EthanThatOneKid</a></small> |
+      <small>github: <a href="https://github.com/EthanThatOneKid">@EthanThatOneKid</a></small> |
+      <small><a href="#top">goto top &#x2191;</a></small>
+    </footer>
+
+
     <script>
-      /*
-        https://github.com/EthanThatOneKid/ascii
-        https://github.com/EthanThatOneKid/math
-        https://github.com/EthanThatOneKid/MazeBot
-        https://github.com/EthanThatOneKid/os
-        https://github.com/EthanThatOneKid/puppeteer
-        https://github.com/EthanThatOneKid/3D
-      */
       create_project_cards("#project_cards", [
         {
           "project": "ascii.js",
           "stack": ["vanillajs", "html/css"],
-          "description": "My ascii project is a collection of games using my custom 'library' called ascii.js. Using ascii.js, I developed ascii-rendered versions of Pong and Snake.",
+          "description": "My ascii project is a collection of games using my custom library called ascii.js. Using ascii.js, I developed ascii-rendered versions of Pong and Snake.",
           "website": "https://github.com/EthanThatOneKid/ascii",
           "github": "https://github.com/EthanThatOneKid/ascii",
-          "image": "proj1.png",
+          "image": "ascii.png",
           "status": "Complete",
           "readmore": "https://github.com/EthanThatOneKid/ascii"
         },
         {
           "project": "Math",
           "stack": ["vanillajs", "html/css", "tensorflow", "jquery"],
-          "description": "This repository is a collection of 'subrepositories' about various math topics. Notable subrepositories include the Cribbage Hand Calculator and Lindenmayer.js.",
+          "description": "This repository is a collection of subrepositories on various math topics. Notable subrepositories include the Cribbage Hand Calculator and Lindenmayer.js.",
           "website": "https://github.com/EthanThatOneKid/math",
           "github": "https://github.com/EthanThatOneKid/math",
-          "image": "proj3.png",
+          "image": "math.png",
           "status": "Accumulative",
           "readmore": "https://github.com/EthanThatOneKid/math"
         },
         {
           "project": "MazeBot",
           "stack": ["discord", "nodejs", "heroku"],
-          "description": "My ascii project is a collection of games using my custom 'library' called ascii.js. Using ascii.js, I developed ascii-rendered versions of Pong and Snake.",
+          "description": "The MazeBot is a Discord bot that uses Discord as an interface for navigating a text-based RPG.",
           "website": "https://github.com/EthanThatOneKid/mazebot",
           "github": "https://github.com/EthanThatOneKid/mazebot",
-          "image": "proj1.png",
-          "status": "In Development",
+          "image": "mazebot.png",
+          "status": "Accumulative",
           "readmore": "https://github.com/EthanThatOneKid/mazebot"
         },
         {
           "project": "OS",
-          "stack": ["python", "nodejs", "tensorflow", "nltk"],
-          "description": "This repository is a collection of 'subrepositories' about various math topics. Notable subrepositories include the Cribbage Hand Calculator and Lindenmayer.js.",
+          "stack": ["python", "nodejs", "tensorflow", "electron"],
+          "description": "OS is a chatbot that uses machine learning to communicate with the user. There is a lot of research that went into this project, so for further documentation, I invite you to visit the GitHub repository.",
           "website": "https://github.com/EthanThatOneKid/os",
           "github": "https://github.com/EthanThatOneKid/os",
-          "image": "proj3.png",
+          "image": "os.png",
           "status": "In Development",
           "readmore": "https://github.com/EthanThatOneKid/os"
         },
         {
           "project": "Puppeteer",
           "stack": ["nodejs", "puppeteer"],
-          "description": "My ascii project is a collection of games using my custom 'library' called ascii.js. Using ascii.js, I developed ascii-rendered versions of Pong and Snake.",
+          "description": "This repository is a collection of projects that use Puppeteer to automate tasks in Chrome. The best so far is the Neopets subrepository which automates daily tasks for an online game called Neopets.",
           "website": "https://github.com/EthanThatOneKid/puppeteer",
           "github": "https://github.com/EthanThatOneKid/puppeteer",
-          "image": "proj1.png",
+          "image": "puppeteer.png",
           "status": "Accumulative",
           "readmore": "https://github.com/EthanThatOneKid/puppeteer"
         },
         {
           "project": "3D",
           "stack": ["vanillajs", "html/css", "p5", "threejs"],
-          "description": "This repository is a collection of 'subrepositories' about various math topics. Notable subrepositories include the Cribbage Hand Calculator and Lindenmayer.js.",
+          "description": "This repository is a collection of experiments using 3d rendering in the browser. My best implementation thus far is my Hypercube visualization that uses TensorFlow to do matrix calculations and THREE.js to render the projection.",
           "website": "https://github.com/EthanThatOneKid/3d",
           "github": "https://github.com/EthanThatOneKid/3d",
-          "image": "proj3.png",
+          "image": "3d.gif",
           "status": "Accumulative",
           "readmore": "https://github.com/EthanThatOneKid/3d"
         }

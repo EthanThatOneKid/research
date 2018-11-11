@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .blog-card {
   text-align: left;
-  height: 210px;
+  height: 240px;
   width: 500px;
   display: flex;
   flex-direction: column;
